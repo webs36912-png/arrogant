@@ -487,12 +487,12 @@ function initHeroParallax() {
     { yPercent: 0 },
     {
       yPercent: 20,
-      ease: 'none',                // [C]
+      ease: 'none',
       scrollTrigger: {
         trigger: hero,
-        start:   'top center',     // [C]
-        end:     'bottom top+=30', // [C]
-        scrub:   2.5,              // [C]
+        start:   'top center',
+        end:     'bottom-=11vh top+=30',
+        scrub:   2.5,
       }
     }
   );
