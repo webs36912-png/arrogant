@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection — ARROGANT</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="ann-bar" role="marquee">
+    <div class="ann-bar-track">
+      <span>Hand-formed sterling silver</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Free shipping over $300</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Limited pieces</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Returns within 14 days</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Hand-formed sterling silver</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Free shipping over $300</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Limited pieces</span>
+      <span class="ann-bar-dot">·</span>
+      <span>Returns within 14 days</span>
+      <span class="ann-bar-dot">·</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="collections.html" class="nav-link">SHOP</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+      </div>
+      <a href="index.html" class="nav-wordmark">ARROGANT</a>
+      <div class="nav-right">
+        <button class="nav-link" data-open-cart>
+          BAG <span class="nav-bag-count"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CART OVERLAY -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cart-drawer" aria-label="Shopping bag">
+    <div class="cart-drawer-header">
+      <span class="cart-drawer-title">YOUR BAG <span id="cart-drawer-count"></span></span>
+      <button class="cart-drawer-close" id="cart-close" aria-label="Close">✕</button>
+    </div>
+    <div class="cart-shipping-bar-wrap">
+      <div class="cart-shipping-bar">
+        <div class="cart-shipping-fill" id="cart-shipping-fill"></div>
+      </div>
+      <p class="cart-shipping-text" id="cart-shipping-text">Spend $300 for free shipping</p>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-upsell" id="cart-upsell">
+      <div class="cart-upsell-label">YOU MIGHT ALSO LIKE</div>
+      <div class="cart-upsell-grid"></div>
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cart-total-price">$0</span>
+      </div>
+      <button class="cart-checkout-btn">CHECKOUT</button>
+      <button class="btn-continue-shopping" data-close-cart>← Continue shopping</button>
+    </div>
+  </div>
+
+  <!-- COLLECTION HERO [C — BD: imagen + overlay + headline] -->
+  <section class="collection-hero">
+    <div class="collection-hero-img-wrap">
+      <img src="images/hero.png" alt="The Collection" loading="eager">
+    </div>
+    <div class="collection-hero-content">
+      <div class="section-label">THE COLLECTION</div>
+      <h1 class="collection-hero-title">Everything<br>in silver.</h1>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="collection-section" style="padding-top: 4rem;">
+    <div class="collection-grid">
+
+      <a href="product.html?id=ring-01" class="product-card" data-reveal>
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arrogant-ring/600/800" alt="Arrogant Ring I" loading="lazy">
+          <button class="btn-quick-add" data-pid="ring-01">QUICK ADD</button>
+        </div>
+        <div class="product-card-info">
+          <div class="product-card-name">ARROGANT RING I</div>
+          <div class="product-card-sub">Sterling Silver — Ring</div>
+          <div class="product-card-price">$280</div>
+        </div>
+      </a>
+
+      <a href="product.html?id=chain-01" class="product-card" data-reveal>
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arrogant-chain/600/800" alt="Arrogant Chain I" loading="lazy">
+          <button class="btn-quick-add" data-pid="chain-01">QUICK ADD</button>
+        </div>
+        <div class="product-card-info">
+          <div class="product-card-name">ARROGANT CHAIN I</div>
+          <div class="product-card-sub">Sterling Silver — Necklace</div>
+          <div class="product-card-price">$320</div>
+        </div>
+      </a>
+
+      <a href="product.html?id=cuff-01" class="product-card" data-reveal>
+        <div class="product-card-img">
+          <img src="https://picsum.photos/seed/arrogant-cuff/600/800" alt="Arrogant Cuff I" loading="lazy">
+          <button class="btn-quick-add" data-pid="cuff-01">QUICK ADD</button>
+        </div>
+        <div class="product-card-info">
+          <div class="product-card-name">ARROGANT CUFF I</div>
+          <div class="product-card-sub">Sterling Silver — Cuff</div>
+          <div class="product-card-price">$350</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" data-reveal>
+    <div class="footer-wordmark">ARROGANT</div>
+    <div class="footer-links">
+      <a href="collections.html">Shop</a>
+      <a href="about.html">About</a>
+      <button data-open-cart>Bag</button>
+    </div>
+    <div class="footer-legal">
+      <p>925 Sterling Silver. Hand-formed. Limited.</p>
+      <p>© 2026 ARROGANT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
