@@ -81,9 +81,9 @@
   --normal-page-width: 120rem;
 
   /* LAYOUT */
-  --annbar-height: 36px;
+  --annbar-height: 0px;
   --nav-height:    56px;
-  --header-total:  92px;
+  --header-total:  56px;
 }
 
 /* ── RESET ──────────────────────────────────────────────── */
@@ -1134,9 +1134,9 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   :root {
-    --annbar-height: 32px;
+    --annbar-height: 0px;
     --nav-height: 52px;
-    --header-total: 84px;
+    --header-total: 52px;
   }
 
   .nav {
