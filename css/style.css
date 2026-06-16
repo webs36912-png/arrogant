@@ -1,8 +1,8 @@
 /* ============================================================
    ARROGANT — 1:1 BEDOUIN'S DAUGHTER
-   Display: Disket Mono (089) — equivalente a ABC Gaisyr Mono [C]
+   Display: Gorgeous Light (102) — editorial serif luxury
    UI/Body: Cabinet Grotesk (047) — equivalente a ABC ROM [C]
-   Paleta: #080808 / #0F4C5C / #F2E9D8
+   Paleta: #010202 / #0F4C5C / #F2E9D8
    Eases: 1:1 del teardown de BD [C]
    ============================================================ */
 
@@ -10,17 +10,17 @@
 
 @font-face {
   font-family: 'ArrogantDisplay';
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/Disket-Mono-Regular.ttf') format('truetype');
+  src: url('../fonts/Gorgeous-Light.ttf') format('truetype');
 }
 @font-face {
   font-family: 'ArrogantDisplay';
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/Disket-Mono-Bold.ttf') format('truetype');
+  src: url('../fonts/Gorgeous-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'ArrogantUI';
@@ -41,7 +41,7 @@
 
 :root {
   /* PALETA [C — adaptada] */
-  --color-background:   #080808;
+  --color-background:   #010202;
   --color-foreground:   #F2E9D8;
   --color-body-text:    #F2E9D8;
   --color-accent:       #0F4C5C;
@@ -54,7 +54,7 @@
   --color-stock-out:    #5c5c5c;
 
   /* FAMILIAS */
-  --font-display: 'ArrogantDisplay', 'Courier New', monospace;
+  --font-display: 'ArrogantDisplay', 'Georgia', serif;
   --font-ui:      'ArrogantUI', Arial, sans-serif;
 
   /* VELOCIDADES [C — BD exacto] */
@@ -313,7 +313,7 @@ ul { list-style: none; }
 .cart-item-img {
   aspect-ratio: 3/4;
   overflow: hidden;
-  background: #141414;
+  background: #0d0e0e;
 }
 .cart-item-img img {
   width: 100%; height: 100%;
@@ -416,7 +416,7 @@ ul { list-style: none; }
 
 .cart-upsell-img {
   aspect-ratio: 3/4;
-  background: #141414;
+  background: #0d0e0e;
   overflow: hidden;
 }
 .cart-upsell-img img { width: 100%; height: 100%; object-fit: cover; }
@@ -542,35 +542,36 @@ ul { list-style: none; }
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  padding: 2rem;
-  gap: 1.25rem;
+  align-items: flex-end;
+  text-align: right;
+  gap: 1.5rem;
+  max-width: 46%;
 }
 
 .hero-wordmark {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
-  letter-spacing: 0.35em;
+  font-weight: 300;
+  font-size: clamp(3rem, 6.5vw, 7rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-foreground);
-  line-height: 1;
+  line-height: 0.92;
 }
 
 .hero-tagline {
   font-family: var(--font-ui);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(242, 233, 216, 0.65);
+  color: rgba(242, 233, 216, 0.55);
 }
 
 /* ── COLLECTION SECTION [C — BD grid de variantes] ──────── */
@@ -614,7 +615,7 @@ ul { list-style: none; }
   position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
-  background: #111;
+  background: #090a0a;
 }
 
 .product-card-img img {
@@ -732,7 +733,7 @@ ul { list-style: none; }
   aspect-ratio: 3/4;
   overflow: hidden;
   cursor: pointer;
-  background: #111;
+  background: #090a0a;
   opacity: 0.5;
   transition: opacity var(--animation-speed) var(--animation-timing-hover);
   border: 1px solid transparent;
@@ -778,12 +779,12 @@ ul { list-style: none; }
 .pdp-breadcrumb a:hover { color: var(--color-foreground); }
 .pdp-breadcrumb span { opacity: 0.4; }
 
-/* Título: Disket Mono uppercase — 1:1 ABC Gaisyr Mono [C] */
+/* Título: Gorgeous Light — editorial serif */
 .pdp-title {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.5rem, 2.4vw, 2.5rem);
-  letter-spacing: 0.25em;
+  font-weight: 300;
+  font-size: clamp(1.6rem, 2.4vw, 2.8rem);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1.0;
@@ -1045,8 +1046,9 @@ ul { list-style: none; }
 
 .about-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
-  letter-spacing: 0.25em;
+  font-weight: 300;
+  font-size: clamp(1.75rem, 2.5vw, 2.8rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1.0;
@@ -1216,9 +1218,9 @@ ul { list-style: none; }
 }
 .nav-wordmark {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-foreground);
   text-align: center;
@@ -1270,8 +1272,8 @@ ul { list-style: none; }
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 400;
-  letter-spacing: 0.15em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1.1;
