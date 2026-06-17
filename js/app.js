@@ -17,6 +17,7 @@ const PRODUCTS = {
     code:        'ARG-R00',
     price:       '$290',
     priceNum:    290,
+    color:       '#0F4C5C',
     category:    'RINGS',
     scarcity:    'Hand-formed · Limited pieces',
     description: '<p>Selene is a flat crescent shield ring with a polished orb at its tip — named after the goddess of the moon. The hammered face catches light differently at every angle. The band is oxidized dark, deliberately.</p><p>925 sterling silver. Each piece is hand-formed. The surface is meant to age.</p>',
@@ -33,6 +34,7 @@ const PRODUCTS = {
     code:        'ARG-R01',
     price:       '$280',
     priceNum:    280,
+    color:       '#1A6B7C',
     category:    'RINGS',
     scarcity:    'Hand-formed · Limited pieces',
     description: '<p>Luna is a statement ring shaped around the crescent moon — a hammered silver arc with a polished orb at its center. Each piece bears the marks of the hammer that formed it.</p><p>925 sterling silver. Oxidized finish that deepens with time. Not a perfect object — a living one.</p>',
@@ -49,6 +51,7 @@ const PRODUCTS = {
     code:        'ARG-R02',
     price:       '$320',
     priceNum:    320,
+    color:       '#082B36',
     category:    'RINGS',
     scarcity:    'Cold-forged · Limited pieces',
     description: '<p>Sigil is a wide-band ring built around two fractured heart halves — a brutalist interpretation of something soft. Cold-forged. Heavy. Intentionally imperfect.</p><p>The surface texture is not decorative. It is evidence of how the piece was made.</p>',
@@ -65,6 +68,7 @@ const PRODUCTS = {
     code:        'ARG-E01',
     price:       '$240',
     priceNum:    240,
+    color:       '#218BA0',
     category:    'EARRINGS',
     scarcity:    'Hand-formed · Limited pieces',
     description: '<p>Aura is a chunky hoop — thick, tubular, oxidized. Heavy enough to feel present without being loud. The kind of earring that works alone.</p><p>Sold as a pair. Post and butterfly back closure.</p>',
@@ -81,6 +85,7 @@ const PRODUCTS = {
     code:        'ARG-E02',
     price:       '$260',
     priceNum:    260,
+    color:       '#1A7589',
     category:    'EARRINGS',
     scarcity:    'Hand-formed · Limited pieces',
     description: '<p>Cascade is a long open-drop earring with a hammered interior and polished edge. The negative space is part of the design — the shadow inside the form is as intentional as the form itself.</p><p>Sold as a pair. Post closure.</p>',
@@ -97,6 +102,7 @@ const PRODUCTS = {
     code:        'ARG-E03',
     price:       '$280',
     priceNum:    280,
+    color:       '#0B3C4A',
     category:    'EARRINGS',
     scarcity:    'Cold-forged · Limited pieces',
     description: '<p>Void is a geometric stud — a cold-forged faceted form in oxidized silver. Architectural rather than decorative. The kind of piece that changes how a face reads in light.</p><p>Sold as a pair. Post and butterfly closure.</p>',
@@ -300,9 +306,12 @@ function renderCartDrawer() {
 function populateProduct() {
   if (!document.querySelector('.pdp-wrap')) return;
 
-  const id = new URLSearchParams(window.location.search).get('id') || 'ring-01';
+  const id = new URLSearchParams(window.location.search).get('id') || 'ring-selene';
   const p  = PRODUCTS[id];
   if (!p) return;
+
+  // Color del producto → refleja el tono de la card en el PDP
+  if (p.color) document.documentElement.style.setProperty('--product-color', p.color);
 
   // Title de la pestaña
   document.title = `${p.name} — ARROGANT`;
@@ -374,13 +383,15 @@ function populateProduct() {
     relGrid.innerHTML = others.map(rid => {
       const rp = PRODUCTS[rid];
       return `
-        <a href="product.html?id=${rid}" class="product-card" data-reveal>
+        <a href="product.html?id=${rid}" class="product-card" style="--card-color:${rp.color || 'var(--color-accent)'}" data-reveal>
           <div class="product-card-img">
             <img src="${rp.img}" alt="${rp.name}" loading="lazy">
+            <div class="product-card-hover-content">
+              <span class="product-card-hover-name">${rp.name}</span>
+              <button class="product-card-hover-atc btn-quick-add" data-pid="${rid}">ADD TO BAG — ${rp.price}</button>
+            </div>
           </div>
           <div class="product-card-info">
-            <div class="product-card-name">${rp.name}</div>
-            <div class="product-card-sub">${rp.subtitle}</div>
             <div class="product-card-price">${rp.price}</div>
           </div>
         </a>`;
