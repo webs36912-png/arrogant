@@ -386,13 +386,10 @@ function populateProduct() {
         <a href="product.html?id=${rid}" class="product-card" style="--card-color:${rp.color || 'var(--color-accent)'}" data-reveal>
           <div class="product-card-img">
             <img src="${rp.img}" alt="${rp.name}" loading="lazy">
-            <div class="product-card-hover-content">
-              <span class="product-card-hover-name">${rp.name}</span>
-              <button class="product-card-hover-atc btn-quick-add" data-pid="${rid}">ADD TO BAG — ${rp.price}</button>
-            </div>
           </div>
           <div class="product-card-info">
-            <div class="product-card-price">${rp.price}</div>
+            <span class="product-card-hover-name">${rp.name}</span>
+            <button class="product-card-hover-atc btn-quick-add" data-pid="${rid}">ADD TO BAG — ${rp.price}</button>
           </div>
         </a>`;
     }).join('');

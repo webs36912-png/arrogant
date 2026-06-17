@@ -610,14 +610,14 @@ ul { list-style: none; }
   background: var(--color-background);
 }
 
-/* Línea de color → fill completo en hover [C — BD scaleY desde abajo] */
+/* Línea de color desde el centro → fill completo en hover [C — BD] */
 .product-card-img::before {
   content: '';
   position: absolute;
   inset: 0;
   background: var(--card-color, var(--color-accent));
-  transform: scaleY(0.02);
-  transform-origin: bottom center;
+  transform: scaleY(0.018);
+  transform-origin: center center;
   transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1;
 }
@@ -625,35 +625,31 @@ ul { list-style: none; }
   transform: scaleY(1);
 }
 
-/* Imagen flota sobre el color fill */
+/* Imagen en primer plano — nunca pierde visibilidad */
 .product-card-img img {
   position: relative;
   z-index: 2;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.4s ease;
-}
-.product-card:hover .product-card-img img {
-  opacity: 0.18;
 }
 
-/* Overlay de hover: nombre + ATC */
-.product-card-hover-content {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
+/* Info debajo de la imagen — oculta en reposo, aparece en hover */
+.product-card-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 1.25rem 1.875rem;
+  gap: 0.625rem;
+  padding: 0.875rem 1.25rem 0;
   opacity: 0;
+  transform: translateY(6px);
   pointer-events: none;
-  transition: opacity 0.18s ease 0.2s;
+  transition: opacity 0.25s ease 0.2s,
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
 }
-.product-card:hover .product-card-hover-content {
+.product-card:hover .product-card-info {
   opacity: 1;
+  transform: translateY(0);
   pointer-events: auto;
 }
 
@@ -663,47 +659,24 @@ ul { list-style: none; }
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--color-foreground);
-  margin-bottom: 0.875rem;
-  transform: translateY(8px);
-  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.22s;
-}
-.product-card:hover .product-card-hover-name {
-  transform: translateY(0);
 }
 
-/* ATC button en hover — marfil con texto en color de la card */
+/* ATC button — marfil, texto en color de la card */
 .product-card-hover-atc {
   width: 100%;
   background: var(--color-foreground);
   color: var(--card-color, var(--color-accent));
   border: none;
   border-radius: 100px;
-  padding: 0.875rem 1rem;
+  padding: 0.8rem 1rem;
   font-family: var(--font-display);
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
-  transform: translateY(8px);
-  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.28s,
-              opacity 0.2s ease;
-}
-.product-card:hover .product-card-hover-atc {
-  transform: translateY(0);
+  transition: opacity 0.2s ease;
 }
 .product-card-hover-atc:hover { opacity: 0.88; }
-
-/* Info debajo de la card — solo precio visible en reposo */
-.product-card-info {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.product-card-price {
-  font-size: 13px;
-  color: var(--color-foreground);
-}
 
 /* ── PDP — PRODUCT DETAIL PAGE ──────────────────────────── */
 
