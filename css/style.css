@@ -1081,6 +1081,81 @@ ul { list-style: none; }
   gap: 1.25rem;
 }
 
+/* ── FLOATING CARDS SECTION ──────────────────────────────── */
+
+.floating-section {
+  background: var(--color-background);
+  padding: 8rem 5% 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  overflow: hidden;
+}
+
+.floating-cards {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-card {
+  position: absolute;
+  width: clamp(180px, 18vw, 260px);
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.65),
+    0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.floating-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+}
+
+.fc-1 {
+  transform: rotate(-11deg) translateX(-38%) translateY(-18px);
+  z-index: 1;
+}
+
+.fc-2 {
+  transform: rotate(5deg) translateY(28px);
+  z-index: 3;
+}
+
+.fc-3 {
+  transform: rotate(-7deg) translateX(38%) translateY(-5px);
+  z-index: 2;
+  background: var(--color-accent);
+}
+
+.floating-slogan {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 4.5rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-foreground);
+  text-align: center;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .floating-cards { height: 300px; }
+  .fc-1 { transform: rotate(-9deg) translateX(-30%) translateY(-10px); }
+  .fc-2 { transform: rotate(4deg) translateY(18px); }
+  .fc-3 { transform: rotate(-6deg) translateX(30%) translateY(-5px); }
+  .floating-slogan { font-size: clamp(1.5rem, 6vw, 2.5rem); }
+}
+
 /* ── FOOTER [C — BD ultra-minimalista] ──────────────────── */
 
 .footer {
