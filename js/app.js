@@ -388,8 +388,11 @@ function populateProduct() {
             <img src="${rp.img}" alt="${rp.name}" loading="lazy">
           </div>
           <div class="product-card-info">
-            <span class="product-card-hover-name">${rp.name}</span>
-            <button class="product-card-hover-atc btn-quick-add" data-pid="${rid}">ADD TO BAG — ${rp.price}</button>
+            <div class="product-card-hover-reveal">
+              <span class="product-card-hover-name">${rp.name}</span>
+              <button class="product-card-hover-atc btn-quick-add" data-pid="${rid}">ADD TO BAG — ${rp.price}</button>
+            </div>
+            <div class="product-card-price">${rp.price}</div>
           </div>
         </a>`;
     }).join('');
