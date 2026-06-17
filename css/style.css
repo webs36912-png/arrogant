@@ -1124,7 +1124,7 @@ ul { list-style: none; }
 }
 
 .fc-1 {
-  transform: translateX(-24vw) translateY(-22px) rotate(-9deg) rotateY(22deg);
+  transform: translateX(-32vw) translateY(-22px) rotate(-9deg) rotateY(22deg);
   z-index: 1;
 }
 
@@ -1134,7 +1134,7 @@ ul { list-style: none; }
 }
 
 .fc-3 {
-  transform: translateX(24vw) translateY(-8px) rotate(-7deg) rotateY(-22deg);
+  transform: translateX(32vw) translateY(-8px) rotate(-7deg) rotateY(-22deg);
   z-index: 2;
   background: var(--color-accent);
 }
