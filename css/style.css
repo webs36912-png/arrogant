@@ -606,7 +606,7 @@ ul { list-style: none; }
   position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
-  background: #090a0a;
+  background: var(--color-background);
 }
 
 .product-card-img img {
