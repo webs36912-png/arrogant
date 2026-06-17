@@ -1,6 +1,6 @@
 /* ============================================================
    ARROGANT — 1:1 BEDOUIN'S DAUGHTER
-   Display: Branch (052) — modern ligature serif · Fontesk
+   Display: Morganite Pro (103) — condensed display · Rajesh Rajput
    UI/Body: Cabinet Grotesk (047) — equivalente a ABC ROM [C]
    Paleta: #010202 / #0F4C5C / #F2E9D8
    Eases: 1:1 del teardown de BD [C]
@@ -13,7 +13,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/Branch-Regular.otf') format('opentype');
+  src: url('../fonts/MorganitePro-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'ArrogantUI';
@@ -47,7 +47,7 @@
   --color-stock-out:    #5c5c5c;
 
   /* FAMILIAS */
-  --font-display: 'ArrogantDisplay', 'Times New Roman', serif;
+  --font-display: 'ArrogantDisplay', 'Arial Narrow', sans-serif;
   --font-ui:      'ArrogantUI', Arial, sans-serif;
 
   /* VELOCIDADES [C — BD exacto] */
@@ -551,11 +551,11 @@ ul { list-style: none; }
 .hero-wordmark {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(3rem, 6.5vw, 7rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(5rem, 12vw, 14rem);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-foreground);
-  line-height: 0.92;
+  line-height: 0.88;
 }
 
 .hero-tagline {
@@ -772,12 +772,12 @@ ul { list-style: none; }
 .pdp-breadcrumb a:hover { color: var(--color-foreground); }
 .pdp-breadcrumb span { opacity: 0.4; }
 
-/* Título: Branch — modern ligature serif */
+/* Título: Morganite Pro — condensed display */
 .pdp-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.6rem, 2.4vw, 2.8rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1.0;
@@ -1040,8 +1040,8 @@ ul { list-style: none; }
 .about-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.75rem, 2.5vw, 2.8rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(3rem, 5vw, 6rem);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1.0;
@@ -1212,8 +1212,8 @@ ul { list-style: none; }
 .nav-wordmark {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.15em;
+  font-size: 22px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-foreground);
   text-align: center;
@@ -1264,9 +1264,9 @@ ul { list-style: none; }
 }
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1.1;
@@ -1298,9 +1298,9 @@ ul { list-style: none; }
 }
 .collection-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(3rem, 7vw, 7rem);
   font-weight: 400;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-foreground);
   line-height: 1;
