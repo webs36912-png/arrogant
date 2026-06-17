@@ -1144,7 +1144,7 @@ ul { list-style: none; }
   transform: translateY(0);
 }
 
-/* ── EDITORIAL SECTION [C — BD: imagen full-bleed + texto izq + panel producto der] ── */
+/* ── EDITORIAL SECTION [C — BD: imagen full-bleed, texto centro, panel con marco] ── */
 
 .editorial-section {
   position: relative;
@@ -1164,91 +1164,98 @@ ul { list-style: none; }
 .editorial-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(1, 2, 2, 0.6)  0%,
-    rgba(1, 2, 2, 0.05) 55%,
-    rgba(1, 2, 2, 0.55) 100%
-  );
+  background: rgba(1, 2, 2, 0.48);
 }
 
-/* Texto izquierda */
-.editorial-left {
+/* Wrapper centrado que contiene texto + panel */
+.editorial-body {
   position: absolute;
+  inset: 0;
   z-index: 2;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6vw;
+  padding: 0 5%;
+}
+
+/* Bloque de texto */
+.editorial-text {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  max-width: 34%;
+  gap: 1rem;
+  max-width: 380px;
 }
 
 .editorial-label {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.28em;
+  font-size: 10px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(242, 233, 216, 0.5);
+  color: rgba(242, 233, 216, 0.45);
 }
 
 .editorial-heading {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.5rem, 5.5vw, 6.5rem);
-  letter-spacing: 0.1em;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-foreground);
-  line-height: 0.92;
+  line-height: 1.15;
 }
 
-/* Panel producto derecha */
+.editorial-sub {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(242, 233, 216, 0.6);
+  letter-spacing: 0.02em;
+  max-width: 32ch;
+}
+
+/* Panel producto con marco cuadrado */
 .editorial-panel {
-  position: absolute;
-  z-index: 2;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: clamp(180px, 20%, 260px);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.875rem;
+  flex-shrink: 0;
 }
 
-.editorial-panel-img {
-  width: 100%;
-  aspect-ratio: 3/4;
+.editorial-panel-frame {
+  width: clamp(160px, 18vw, 240px);
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(242, 233, 216, 0.18);
+  background: rgba(1, 2, 2, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
 }
 
-.editorial-panel-img img {
+.editorial-panel-frame img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.editorial-panel-copy {
-  font-family: var(--font-ui);
-  font-size: 12px;
-  line-height: 1.6;
-  color: rgba(242, 233, 216, 0.65);
-  letter-spacing: 0.02em;
+.editorial-panel-name {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(242, 233, 216, 0.55);
 }
 
 .editorial-panel-cta {
-  display: inline-flex;
-  align-items: center;
   font-family: var(--font-ui);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-foreground);
-  border-bottom: 1px solid rgba(242, 233, 216, 0.4);
+  border-bottom: 1px solid rgba(242, 233, 216, 0.35);
   padding-bottom: 3px;
   transition: border-color var(--animation-speed) var(--animation-timing-hover),
               opacity var(--animation-speed) var(--animation-timing-hover);
@@ -1329,25 +1336,20 @@ ul { list-style: none; }
 
   .hero-wordmark { font-size: clamp(2rem, 10vw, 3rem); letter-spacing: 0.2em; }
 
-  .editorial-overlay {
-    background: rgba(1, 2, 2, 0.45);
+  .editorial-body {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.25rem;
   }
 
-  .editorial-left {
-    left: 1.25rem;
-    top: 1.75rem;
-    transform: none;
-    max-width: 55%;
+  .editorial-text {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
   }
 
-  .editorial-heading {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
-
-  .editorial-panel {
-    right: 1.25rem;
-    top: 50%;
-    width: clamp(120px, 35%, 160px);
+  .editorial-panel-frame {
+    width: clamp(130px, 45vw, 180px);
   }
 }
 
