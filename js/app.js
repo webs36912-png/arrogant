@@ -11,57 +11,6 @@ gsap.registerPlugin(ScrollTrigger, CustomEase);
 // ── CATÁLOGO DE PRODUCTOS ────────────────────────────────
 
 const PRODUCTS = {
-  'ring-selene': {
-    name:        'SELENE RING',
-    subtitle:    'Sterling Silver — Ring',
-    code:        'ARG-R00',
-    price:       '$290',
-    priceNum:    290,
-    color:       '#0F4C5C',
-    category:    'RINGS',
-    scarcity:    'Hand-formed · Limited pieces',
-    description: '<p>Selene is a flat crescent shield ring with a polished orb at its tip — named after the goddess of the moon. The hammered face catches light differently at every angle. The band is oxidized dark, deliberately.</p><p>925 sterling silver. Each piece is hand-formed. The surface is meant to age.</p>',
-    details:     '925 sterling silver. Flat crescent moon shield motif with sphere orb detail. Hammered textured surface. Oxidized antiqued band. Hand-formed — minor surface variations between pieces. Clean with warm water and a soft cloth.',
-    sizing:      'Sizing runs true. If between sizes, order up one. S=5, M=7, L=9.',
-    shipping:    'Ships within 3–5 business days. Free shipping on orders over $300. Returns accepted within 14 days — unworn, in original packaging.',
-    sizes:       ['5', '6', '7', '8', '9'],
-    img:         'images/arrogant-ring-selene-nobg.png',
-    imgs:        ['images/arrogant-ring-selene-nobg.png'],
-  },
-  'ring-luna': {
-    name:        'LUNA RING',
-    subtitle:    'Sterling Silver — Ring',
-    code:        'ARG-R01',
-    price:       '$280',
-    priceNum:    280,
-    color:       '#1A6B7C',
-    category:    'RINGS',
-    scarcity:    'Hand-formed · Limited pieces',
-    description: '<p>Luna is a statement ring shaped around the crescent moon — a hammered silver arc with a polished orb at its center. Each piece bears the marks of the hammer that formed it.</p><p>925 sterling silver. Oxidized finish that deepens with time. Not a perfect object — a living one.</p>',
-    details:     '925 sterling silver. Crescent moon motif with orb detail. Hammered surface. Oxidized antiqued patina. Hand-formed — minor surface variations between pieces. Clean with warm water and a soft cloth.',
-    sizing:      'Sizing runs true. If between sizes, order up one. S=5, M=7, L=9.',
-    shipping:    'Ships within 3–5 business days. Free shipping on orders over $300. Returns accepted within 14 days — unworn, in original packaging.',
-    sizes:       ['5', '6', '7', '8', '9'],
-    img:         'images/arrogant-ring-luna-nobg.png',
-    imgs:        ['images/arrogant-ring-luna-nobg.png'],
-  },
-  'ring-sigil': {
-    name:        'SIGIL RING',
-    subtitle:    'Sterling Silver — Ring',
-    code:        'ARG-R02',
-    price:       '$320',
-    priceNum:    320,
-    color:       '#082B36',
-    category:    'RINGS',
-    scarcity:    'Cold-forged · Limited pieces',
-    description: '<p>Sigil is a wide-band ring built around two fractured heart halves — a brutalist interpretation of something soft. Cold-forged. Heavy. Intentionally imperfect.</p><p>The surface texture is not decorative. It is evidence of how the piece was made.</p>',
-    details:     '925 sterling silver. Wide band with broken-heart sculptural motif. Cold-forged. Oxidized antiqued finish with deep patina. Surface variations are characteristic, not defects. Clean with warm water and a soft cloth.',
-    sizing:      'Sizing runs slightly large due to the wide band. Order your true size. S=5, M=7, L=9.',
-    shipping:    'Ships within 3–5 business days. Free shipping on orders over $300. Returns accepted within 14 days — unworn, in original packaging.',
-    sizes:       ['5', '6', '7', '8', '9'],
-    img:         'images/arrogant-ring-sigil-nobg.png',
-    imgs:        ['images/arrogant-ring-sigil-nobg.png'],
-  },
   'earring-aura': {
     name:        'AURA HOOPS',
     subtitle:    'Sterling Silver — Earrings',
@@ -306,7 +255,7 @@ function renderCartDrawer() {
 function populateProduct() {
   if (!document.querySelector('.pdp-wrap')) return;
 
-  const id = new URLSearchParams(window.location.search).get('id') || 'ring-selene';
+  const id = new URLSearchParams(window.location.search).get('id') || 'earring-aura';
   const p  = PRODUCTS[id];
   if (!p) return;
 
