@@ -491,7 +491,7 @@ function initHeroParallax() {
       scrollTrigger: {
         trigger: hero,
         start:   'top center',
-        end:     'bottom-=11vh top+=30',
+        end:     'bottom top+=30',
         scrub:   2.5,
       }
     }
