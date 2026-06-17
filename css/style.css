@@ -504,22 +504,19 @@ ul { list-style: none; }
 
 .hero {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
   background: var(--color-background);
 }
 
 .hero-img-wrap {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
+  width: 100%;
+  line-height: 0;
 }
 
 .hero-img-wrap img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  height: auto;
+  display: block;
 }
 
 .hero-overlay {
@@ -528,17 +525,18 @@ ul { list-style: none; }
   background: linear-gradient(
     to bottom,
     rgba(1,2,2,0.2) 0%,
-    transparent      40%,
+    transparent      35%,
     transparent      60%,
-    rgba(1,2,2,0.3) 100%
+    rgba(1,2,2,0.35) 100%
   );
 }
 
+/* Texto anclado al centro del viewport, no al centro de la imagen */
 .hero-content {
   position: absolute;
   z-index: 2;
   right: 5%;
-  top: 50%;
+  top: 50vh;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;

@@ -479,19 +479,19 @@ function initQuickAdd() {
 // ── HERO PARALLAX [C — BD scrub:2.5 ease:"none"] ─────────
 
 function initHeroParallax() {
-  const hero = document.querySelector('.hero');
-  const img  = hero?.querySelector('.hero-img-wrap img');
-  if (!hero || !img) return;
+  const wrap = document.querySelector('.hero-img-wrap');
+  const img  = wrap?.querySelector('img');
+  if (!wrap || !img) return;
 
   gsap.fromTo(img,
     { yPercent: 0 },
     {
-      yPercent: 20,
+      yPercent: 8,
       ease: 'none',
       scrollTrigger: {
-        trigger: hero,
-        start:   'top center',
-        end:     'bottom top+=30',
+        trigger: wrap,
+        start:   'top top',
+        end:     'bottom top',
         scrub:   2.5,
       }
     }
