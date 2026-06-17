@@ -1148,6 +1148,10 @@ ul { list-style: none; }
   z-index: 3;
 }
 
+.fc-2 img {
+  object-position: center 20%;
+}
+
 .fc-3 {
   animation: float-3 4.7s ease-in-out infinite 0.4s;
   z-index: 2;
