@@ -152,7 +152,7 @@ ul { list-style: none; }
 
 .nav.nav--scrolled {
   background: var(--color-background);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-accent);
 }
 
 .nav-left {
